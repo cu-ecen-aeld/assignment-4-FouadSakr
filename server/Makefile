@@ -1,5 +1,4 @@
 CC ?= gcc
-CROSS_COMPILE ?=
 
 CFLAGS = -Wall -Werror
 LDFLAGS =
@@ -10,7 +9,7 @@ SOURCES = aesdsocket.c
 all: $(TARGET)
 
 $(TARGET): $(SOURCES)
-	$(CROSS_COMPILE)$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS)
+	$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS)
 
 default: all
 
