@@ -5,10 +5,11 @@ on:
             - '*'
         branches:
             - '*'
+    workflow_dispatch:
 jobs:
     full-test:
-  container: cuaesd/aesd-autotest:24-assignment5-buildroot
         runs-on: self-hosted
+        container: cuaesd/aesd-autotest:24-assignment5-buildroot
         timeout-minutes: 120
         steps:
           - uses: actions/checkout@v2
@@ -16,7 +17,7 @@ jobs:
             run: git submodule update --init --recursive
           - uses: webfactory/ssh-agent@v0.5.3
             with:
-                ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+              ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
           - name: Run full test
             env:
               GIT_SSH_COMMAND: "ssh -o StrictHostKeyChecking=no"
