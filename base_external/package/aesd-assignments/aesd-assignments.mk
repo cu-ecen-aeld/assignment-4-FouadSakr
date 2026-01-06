@@ -7,7 +7,7 @@
 
 # NOTE: Repository contains your aesd assignments content including the `server/` directory.
 # Pin to a specific commit for reproducible builds.
-AESD_ASSIGNMENTS_VERSION = 95070a934fcbb666f339351fae934e629362d3f6
+AESD_ASSIGNMENTS_VERSION = 2222ce7da6199407a8d258cdbf9ad080789bee9e
 # Note: Be sure to reference the *ssh* repository URL here (not https) to work properly
 # with ssh keys and the automated build/test system.
 # Your site should start with git@github.com:
